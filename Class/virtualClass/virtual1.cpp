@@ -3,14 +3,11 @@ using namespace std;
 class Shape{
     public:
     virtual void draw() = 0; // pure virtual function
-    void move(){
-        cout << "Moving shape" << endl;
-    }
 };
 
 class Circle : public Shape{
     public:
-    void draw(){
+    void draw() override{
         cout << "Drawing Circle" << endl;
     }
 };
@@ -18,6 +15,5 @@ class Circle : public Shape{
 int main(){
     Circle c;
     c.draw();
-    c.move();
     return 0;
 }
