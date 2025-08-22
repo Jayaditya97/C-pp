@@ -1,17 +1,20 @@
 #include <iostream>
 using namespace std;
 
+
+#include <iostream>
+
 class Base {
 public:
 	virtual void show() {
-		std::cout << "this is to be override" << std::endl;
+		std::cout << "Base class show() called" << std::endl;
 	}
 };
 
 class Derived : public Base {
 public:
 	void show() override {
-		std::cout << "this is override class" << std::endl;
+		std::cout << "Derived class show() called" << std::endl;
 	}
 };
 
